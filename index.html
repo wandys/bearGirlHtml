@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wandy & Nancy's Life</title>
+<style>
+  .wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+.bg-img img{
+	width: 100%;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    var os = function() {
+        var ua = navigator.userAgent,
+            isWindowsPhone = /(?:Windows Phone)/.test(ua),
+            isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+            isAndroid = /(?:Android)/.test(ua),
+            isFireFox = /(?:Firefox)/.test(ua),
+            isChrome = /(?:Chrome|CriOS)/.test(ua),
+            isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+            isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+            isPc = !isPhone && !isAndroid && !isSymbian;
+        return {
+            isTablet: isTablet,
+            isPhone: isPhone,
+            isAndroid : isAndroid,
+            isPc : isPc
+        };
+    }();
+    if(os.isAndroid || os.isPhone){
+
+        window.location = "mobile.html";
+
+    } else {
+        //window.location = "mobile.html";
+
+    }
+
+</script>
+<article class="wrap">
+            <header>
+                <div class="bg-img">
+                    <img src="bg.jpg" >
+                </div>
+            </header>
+        </article>
+</body>
+</html>
